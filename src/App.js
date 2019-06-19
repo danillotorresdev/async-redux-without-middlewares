@@ -20,7 +20,7 @@ class App extends Component {
         </div>
         <div>
 
-          {this.props.state.byId.isLoading && this.props.state.byBulk.isLoading && <p>Carregando...</p>}
+          {(this.props.state.byId.isLoading || this.props.state.byBulk.isLoading) && <p>Carregando...</p>}
           {this.props.state.byId &&
             <p>{this.props.state.byId.data && this.props.state.byId.data.title}</p>
           }
